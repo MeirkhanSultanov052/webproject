@@ -4,7 +4,7 @@ body {
 	font-size:20px;
 	-webkit-overflow-scrolling: touch;
 	justify-content: center;
-	background-color:blueviolet;
+	background-color: #cfcfcf;
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -12,7 +12,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	background-color:  #dfdfdf;
-	margin-top:0px;
+	margin-top:-15px;
 	font-size: 25px;
 	color: #DFDFDF;
 	padding-left: 60px;
@@ -59,4 +59,8 @@ a:hover {
 h3 {
     margin: 50px;
     opacity: 0;
+}
+
+#title1 {
+    text-align: center;
 }

@@ -19,13 +19,13 @@
 			<a href="/" id="logo"><img src="https://image.flaticon.com/icons/png/512/702/702797.png" id="logo" alt="lampa"></a>
 			<ul class="menu">
 				<li >
-					<a class="second" href="/second" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Second</a>
+					<a class="second" href="/second" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Потребители</a>
 				</li>
 				<li >
-					<a class="third" href="/third" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Third</a>
+					<a class="third" href="/third" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Заявки</a>
 				</li>
 				<li >
-					<a class="characters" href="characters.html" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Characters</a>
+					<a class="mail1" href="characters.html" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Почта</a>
 				</li>
 			</ul>
 		</div>
