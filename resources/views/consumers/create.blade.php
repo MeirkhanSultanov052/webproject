@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel = "icon" href ="https://image.flaticon.com/icons/png/512/702/702797.png" type = "image/x-icon">
-    <title>Горэлектросеть</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href= "{{ asset('page1.css') }}" />
+    <link rel="stylesheet" href= "{{ asset('page2.css') }}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECOND PAGE</title>
+    <link rel = "icon" href ="https://image.flaticon.com/icons/png/512/702/702797.png" type = "image/x-icon">
 </head>
 <body onload="load()">
 <header class="container-fluid" id="header">
@@ -37,16 +37,21 @@
 		</div>
 	</header> 
     <div id="main">
-        <div id="text">
-            <h3>ТОО «Горэлектросеть» - Экибастузская распределительная энергопередающая организация, субъект естественной монополии.
-                <br>
-                Предприятие зарегистрировано, как юридическое лицо, 4 сентября 1996 года в Министерстве юстиции Республики Казахстан.
-                <br>
-                Юридический адрес: Павлодарская область, г. Экибастуз, ул.Ауэзова,12.
-                <br>
-                ТОО «Горэлектросеть» осуществляет эксплуатацию, ремонт и обслуживание электрических сетей напряжением 35, 10, 0,4 кВ в городе Экибастузе, Экибастузской сельской зоне и поселке Солнечный.</h3>
+        <div>
+            <h3 id="title1">Создать учетную запись</h3>
         </div>
+        <div class="container">
+<form id = "form" method="POST" action="{{ route('add-consumer')}}" enctype="multipart/form-data">
+        @csrf
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="surname" placeholder="surname">
+        <input type="text" name="adress" placeholder="adress">
+        <input type="file" name="photo" accept="image/png,image/jpeg">
+        <button type="submit">Create</button>
+    </form>
+</div>
     </div>
-    <script src="{{ asset('page1.js') }}"></script>
+    <script src="{{ asset('page2.js') }}"></script>
 </body>
 </html>
+

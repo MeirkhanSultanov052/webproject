@@ -13,9 +13,10 @@ class CreateRequestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('requests', function (Blueprint $table) {
+        Schema::create('request', function (Blueprint $table) {
             $table->id();
-            $table->integer('consumer_id')->references('id')->on('consumers');
+            $table->unsignedBigInteger('consumer_id');
+            $table->foreign('consumer_id')->references('id')->on('consumer')->onDelete('cascade');
             $table->string('title');
             $table->string('body');
             $table->timestamps();

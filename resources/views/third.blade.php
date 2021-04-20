@@ -19,10 +19,10 @@
 			<a href="/" id="logo"><img src="https://image.flaticon.com/icons/png/512/702/702797.png" id="logo" alt="lampa"></a>
 			<ul class="menu">
 				<li >
-					<a class="second" href="/second" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Потребители</a>
+					<a class="second" href="/consumers" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Потребители</a>
 				</li>
 				<li >
-					<a class="third" href="/third" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Заявки</a>
+					<a class="third" href="/requests" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Заявки</a>
 				</li>
 				<li >
                 <a class="mail1" href="characters.html" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Почта</a>
@@ -50,6 +50,6 @@
             </h3>
         </div>
     </div>
-    <script src="{{ asset('page1.js') }}"></script>
+    <script src="{{ asset('page3.js') }}"></script>
 </body>
 </html>

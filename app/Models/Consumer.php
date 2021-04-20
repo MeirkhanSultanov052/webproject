@@ -9,7 +9,7 @@ class Consumer extends Model
 {
     use HasFactory;
 
-    protected $table = "consumers";
+    protected $table = "consumer";
 
     protected $fillable = ['name' ,'surname' ,'adress' ,'photo'  ] ;
 }

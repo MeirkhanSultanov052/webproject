@@ -13,7 +13,7 @@ class CreateConsumersTable extends Migration
      */
     public function up()
     {
-        Schema::create('consumers', function (Blueprint $table) {
+        Schema::create('consumer', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('surname');
