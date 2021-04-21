@@ -60,3 +60,25 @@ h3 {
     margin: 50px;
     opacity: 0;
 }
+
+
+#table,th, td {
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 50px;
+}
+th, td {
+    padding: 15px;
+}
+table {
+    width:90%;
+    text-align: center;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+#reqs {
+    text-align: center;
+}

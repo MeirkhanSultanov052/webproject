@@ -7,31 +7,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THIRD PAGE</title>
+    <title>Заявки</title>
     <link rel = "icon" href ="https://image.flaticon.com/icons/png/512/702/702797.png" type = "image/x-icon">
 </head>
 <body onload="load()">
-<header class="container-fluid" id="header">
+    <header class="container-fluid" id="header">
 		<div  class="container-fluid" id="nav">
         <div id="title1">
-            <a href="/" id="gorset">Горэлектросеть</a>
+            <a href="/" id="gorset">City Power Grid</a>
         </div>
 			<a href="/" id="logo"><img src="https://image.flaticon.com/icons/png/512/702/702797.png" id="logo" alt="lampa"></a>
 			<ul class="menu">
 				<li >
-					<a class="second" href="/consumers" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Потребители</a>
+					<a class="second" href="/consumers" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Consumers</a>
 				</li>
                 <li >
-					<a class="secondcreate" href="consumer/create" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Войти</a>
+					<a class="secondcreate" href="consumer/create" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Login</a>
 				</li>
 				<li >
-					<a class="third" href="/requests" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Заявки</a>
+					<a class="third" href="/requests" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Requests</a>
 				</li>
 				<li >
-					<a class="thirdcreate" href="request/create" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Подать заявку</a>
+					<a class="thirdcreate" href="request/create" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Leave a Request</a>
 				</li>
                 <li >
-					<a class="mail1" href="characters.html" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Почта</a>
+                <a class="mail1" href="/mail/send" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Send a Mail</a>
 				</li>
 			</ul>
 		</div>
@@ -40,23 +40,40 @@
     <div>
         <div>
         <h3>
-            Предприятие оказывает следующие виды услуг для потребителей:
+            The company provides the following types of services for consumers:
             <br>
             <br>
-            Выполнение строительно-монтажных работ по видам: <br>
-                земляные работы общего характера; <br>
-                работы по устройству наружных инженерных сетей и сооружений; <br>
-                работы по устройству внутренних инженерных систем; <br>
-                монтаж технологического оборудования. <br>
-            Предоставление услуг автотранспорта и спецтехники 
+            Construction and installation works by type: <br>
+                general earthworks; <br>
+                works on the arrangement of external engineering networks and structures; <br>
+                work on the arrangement of internal engineering systems; <br>
+                installation of technological equipment. <br>
+            Provision of services of vehicles and special equipment.<br>
             <br>
-            <br>
-            Оставить заявку можно на данной странице войдя в учетную запись; <br>
-            Или в офисе по адресу г. Экибастуз, М.Ауэзова 12.
+            You can leave a request on this page by logging into your account; <br>
+            Or in the office at the address Ekibastuz, M.Auezov 12.
             </h3>
         </div>
-        <div>
-        {{$requests}}
+        <div id="divtable">
+            <h3 id="reqs">Requests Database</h3>
+        <table id="table1">
+                <tr>
+                    <th>Id</th>
+                    <th>Consumer Id</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+                @forelse ($requests as $request)
+                <tr class="table_row">
+                    <td>{{$request->id}}</td>
+                    <td>{{$request->consumer_id}}</td>
+                    <td>{{$request->title}}</td>
+                    <td>{{$request->body}}</td>
+                </tr>
+                @empty
+                <p id="nothing">There are no profiles registered.</p>
+                @endforelse
+            </table>
         </div>
     </div>
     <script src="{{ asset('page3.js') }}"></script>

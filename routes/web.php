@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConsumerController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\MailController;
 
 use App\Models\Consumer;
 use App\Models\Requestt;
@@ -42,3 +43,7 @@ Route::get('request/create' , function(){
 Route::post('request/create' , [RequestController::class , 'store']) -> name('add-request');
 
 Route::get('/requests' , [RequestController::class , 'index'])->name('requests');
+
+
+Route::get('/mail/send', [MailController::class, 'index']) -> name('send-mail');
+Route::post('/mail/send', [MailController::class, 'send']) -> name('send_mail');
