@@ -38,13 +38,18 @@
 	</header> 
     <div id="main">
         <div id="text">
-            <h3>@lang('lang.main_text1')
+            <h3>
+                @lang('lang.main_text1')
+                <br>
                 <br>
                 @lang('lang.main_text2')
                 <br>
+                <br>
                 @lang('lang.main_text3')
                 <br>
-                @lang('lang.main_text4') </h3>
+                <br>
+                @lang('lang.main_text4') 
+            </h3>
         </div>
     </div>
     <script src="{{ asset('page1.js') }}"></script>
