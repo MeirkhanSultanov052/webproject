@@ -1,15 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App;
 use Illuminate\Http\Request;
 use App\Models\Consumer; 
 
 class ConsumerController extends Controller
 {
     //
-    public function index() {
-
+    public function index($lang) {
+        App::setlocale($lang);
         $consumers = Consumer::all();
         //App::setlocale($lang);
 

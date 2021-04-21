@@ -1,15 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App;
 use App\Models\Requestt;
 use Illuminate\Http\Request;
 
 class RequestController extends Controller
 {
     //
-    public function index() {
-
+    public function index($lang) {
+        App::setLocale($lang);
         $requests = Requestt::all();
         //App::setlocale($lang);
 

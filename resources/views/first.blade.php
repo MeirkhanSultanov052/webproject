@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel = "icon" href ="https://image.flaticon.com/icons/png/512/702/702797.png" type = "image/x-icon">
-    <title>Горэлектросеть</title>
+    <title>@lang('lang.city_power_grid')</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href= "{{ asset('page1.css') }}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -14,37 +14,37 @@
     <header class="container-fluid" id="header">
 		<div  class="container-fluid" id="nav">
         <div id="title1">
-            <a href="/" id="gorset">City Power Grid</a>
+            <a href="/main/ru" id="gorset">@lang('lang.city_power_grid')</a>
         </div>
-			<a href="/" id="logo"><img src="https://image.flaticon.com/icons/png/512/702/702797.png" id="logo" alt="lampa"></a>
+			<a href="/main/ru" id="logo"><img src="https://image.flaticon.com/icons/png/512/702/702797.png" id="logo" alt="lampa"></a>
 			<ul class="menu">
 				<li >
-					<a class="second" href="/consumers" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Consumers</a>
+					<a class="second" href="/consumers/ru" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">@lang('lang.consumers')</a>
 				</li>
                 <li >
-					<a class="secondcreate" href="consumer/create" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Login</a>
+					<a class="secondcreate" href="/consumer/create/ru" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">@lang('lang.login')</a>
 				</li>
 				<li >
-					<a class="third" href="/requests" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Requests</a>
+					<a class="third" href="/requests/ru" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">@lang('lang.requests')</a>
 				</li>
 				<li >
-					<a class="thirdcreate" href="request/create" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Leave a Request</a>
+					<a class="thirdcreate" href="/request/create/ru" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">@lang('lang.leave_a_request')</a>
 				</li>
                 <li >
-                <a class="mail1" href="/mail/send" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Send a Mail</a>
+                <a class="mail1" href="/mail/send/ru" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">@lang('lang.send_a_mail')</a>
 				</li>
 			</ul>
 		</div>
 	</header> 
     <div id="main">
         <div id="text">
-            <h3>LLP "Gorelectroset" - Ekibastuz power distribution organization, a subject of natural monopoly.
+            <h3>@lang('lang.main_text1')
                 <br>
-                The enterprise was registered as a legal entity on September 4, 1996 at the Ministry of Justice of the Republic of Kazakhstan.
+                @lang('lang.main_text2')
                 <br>
-                Legal address: Pavlodar region, Ekibastuz, Auezov str., 12.
+                @lang('lang.main_text3')
                 <br>
-                LLP "Gorelectroset" carries out operation, repair and maintenance of electrical networks with voltage of 35, 10, 0.4 kV in the city of Ekibastuz, the Ekibastuz rural area and the village of Solnechny. </h3>
+                @lang('lang.main_text4') </h3>
         </div>
     </div>
     <script src="{{ asset('page1.js') }}"></script>

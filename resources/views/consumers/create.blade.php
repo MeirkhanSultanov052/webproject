@@ -7,47 +7,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>@lang('lang.login')</title>
     <link rel = "icon" href ="https://image.flaticon.com/icons/png/512/702/702797.png" type = "image/x-icon">
 </head>
 <body onload="load()">
     <header class="container-fluid" id="header">
 		<div  class="container-fluid" id="nav">
         <div id="title1">
-            <a href="/" id="gorset">City Power Grid</a>
+            <a href="/main/ru" id="gorset">@lang('lang.city_power_grid')</a>
         </div>
-			<a href="/" id="logo"><img src="https://image.flaticon.com/icons/png/512/702/702797.png" id="logo" alt="lampa"></a>
+			<a href="/main/ru" id="logo"><img src="https://image.flaticon.com/icons/png/512/702/702797.png" id="logo" alt="lampa"></a>
 			<ul class="menu">
 				<li >
-					<a class="second" href="/consumers" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Consumers</a>
+					<a class="second" href="/consumers/ru" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">@lang('lang.consumers')</a>
 				</li>
                 <li >
-					<a class="secondcreate" href="consumer/create" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Login</a>
+					<a class="secondcreate" href="/consumer/create/ru" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">@lang('lang.login')</a>
 				</li>
 				<li >
-					<a class="third" href="/requests" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Requests</a>
+					<a class="third" href="/requests/ru" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">@lang('lang.requests')</a>
 				</li>
 				<li >
-					<a class="thirdcreate" href="request/create" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Leave a Request</a>
+					<a class="thirdcreate" href="/request/create/ru" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">@lang('lang.leave_a_request')</a>
 				</li>
                 <li >
-                <a class="mail1" href="/mail/send" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">Send a Mail</a>
+                <a class="mail1" href="/mail/send/ru" onclick="change(this)" onmouseover ="big(this)" onmouseout="small(this)">@lang('lang.send_a_mail')</a>
 				</li>
 			</ul>
 		</div>
 	</header> 
     <div id="main">
         <div>
-            <h3 id="title1">Create а new Account</h3>
+            <h3 id="title1">@lang('lang.create_а_new_account')</h3>
         </div>
         <div class="container">
 <form id = "form" method="POST" action="{{ route('add-consumer')}}" enctype="multipart/form-data">
         @csrf
-        <input type="text" name="name" placeholder="name">
-        <input type="text" name="surname" placeholder="surname">
-        <input type="text" name="adress" placeholder="adress">
+        <input type="text" name="name" placeholder="@lang('lang.name')">
+        <input type="text" name="surname" placeholder="@lang('lang.surname')">
+        <input type="text" name="adress" placeholder="@lang('lang.adress')">
         <input type="file" name="photo" accept="image/png,image/jpeg">
-        <button type="submit">Create</button>
+        <button type="submit">@lang('lang.create')</button>
     </form>
 </div>
     </div>
